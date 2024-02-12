@@ -83,7 +83,11 @@ export default function NetworkComponent() {
           <Link href={"https://open-book-frontend.vercel.app/Dashboard"}>
             <Button
               variant="contained"
-              style={{ padding: "20px 80px", marginTop: "50px" }}
+              style={{
+                padding: "20px 80px",
+                marginTop: "50px",
+                transform: "skewX(-20deg)",
+              }}
             >
               Visit Now
             </Button>

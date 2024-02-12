@@ -93,7 +93,7 @@ export default function FeaturesSeperated() {
               key={index}
               style={{
                 display: "flex",
-                margin: "10px 0px",
+                margin: "40px 0px",
                 justifyContent: "space-between",
                 alignItems: "center",
                 flexDirection: isSmallScreen
@@ -106,13 +106,15 @@ export default function FeaturesSeperated() {
               <Image
                 src={item.image}
                 alt="image"
-                width={500}
-                height={500}
+                width={300}
+                height={400}
                 className="img-responsive"
+                style={{ maxWidth: "200px", height: "auto" }}
                 // style={{ width: "30px" }}
               />
               <div
                 style={{
+                  maxWidth: "800px",
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
