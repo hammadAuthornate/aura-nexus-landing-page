@@ -9,6 +9,7 @@ import Container from "@mui/material/Container";
 import Masonry from "@mui/lab/Masonry";
 import { useMediaQuery } from "@mui/material";
 import { useTheme } from "@mui/system";
+import Image from "next/image";
 
 const userTestimonials = [
   {
@@ -73,11 +74,6 @@ const darkLogos = [
   "https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/655f5ca4e548b0deb1041c33_Ankara-black.svg",
 ];
 
-const logoStyle = {
-  width: "64px",
-  opacity: 0.3,
-};
-
 export default function Testimonials() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery("(max-width:600px)");
@@ -132,10 +128,11 @@ export default function Testimonials() {
                 title={testimonial.name}
                 subheader={testimonial.occupation}
               />
-              <img
+              <Image
                 src={logos[index]}
                 alt={`Logo ${index + 1}`}
-                style={logoStyle}
+                width={64}
+                style={{ opacity: 0.3 }}
               />
             </Box>
           </Card>

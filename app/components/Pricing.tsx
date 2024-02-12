@@ -79,7 +79,7 @@ export default function Pricing() {
           Pricing
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Start reading world's leading articles with an amazing reading
+          Start reading world&apos;s leading articles with an amazing reading
           experience.
         </Typography>
       </Box>

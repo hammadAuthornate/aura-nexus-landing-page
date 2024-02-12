@@ -41,7 +41,7 @@ export default function Hero() {
               textAlign: "center",
             }}
           >
-            View the World's &nbsp;
+            View the World&apos;s &nbsp;
             <Typography
               component="span"
               variant="h1"
