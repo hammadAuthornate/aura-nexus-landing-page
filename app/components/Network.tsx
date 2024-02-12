@@ -45,7 +45,14 @@ export default function NetworkComponent() {
           justifyContent: "center",
         }}
       >
-        <Image src={"/device.svg"} alt="devices" width={1000} height={600} />
+        <Image
+          src={"/device.svg"}
+          alt="devices"
+          width={600}
+          height={600}
+          className="img-responsive"
+          style={{ width: "100%" }}
+        />
       </motion.div>
       <motion.div
         initial="hide"

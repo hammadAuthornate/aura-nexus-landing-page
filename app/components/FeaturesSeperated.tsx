@@ -44,19 +44,19 @@ const items = [
 ];
 
 const introHeaderVariants = {
-  hide: { opacity: 0, x: -300 },
+  hide: { opacity: 0, y: -200 },
   show: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: { duration: 1 },
   },
 };
 
 const introHeaderVariantsOpposite = {
-  hide: { opacity: 0, x: 300 },
+  hide: { opacity: 0, y: 200 },
   show: {
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: { duration: 1 },
   },
 };
@@ -89,11 +89,19 @@ export default function FeaturesSeperated() {
               key={index}
               style={{
                 display: "flex",
+                margin: "20px 0px",
                 justifyContent: "space-between",
                 flexDirection: index % 2 == 0 ? "row-reverse" : "row",
               }}
             >
-              <Image src={item.image} alt="image" width={500} height={500} />
+              <Image
+                src={item.image}
+                alt="image"
+                width={500}
+                height={500}
+                className="img-responsive"
+                // style={{ width: "30px" }}
+              />
               <div
                 style={{
                   display: "flex",

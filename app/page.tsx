@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <AppAppBar />
       <Hero />
-      <LogoCollection />
+      {/* <LogoCollection /> */}
       {/* <Features /> */}
       <FeaturesSeperated />
       <NetworkComponent />

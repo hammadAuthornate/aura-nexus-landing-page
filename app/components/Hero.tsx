@@ -61,7 +61,7 @@ export default function Hero() {
             articles with voiceover from popular celebrities. <br />
             Elevate your news viewing experience with top-tier features.
           </Typography>
-          <Stack
+          {/* <Stack
             direction={{ xs: "column", sm: "row" }}
             alignSelf="center"
             spacing={1}
@@ -94,7 +94,7 @@ export default function Hero() {
               Terms & Conditions
             </Link>
             .
-          </Typography>
+          </Typography> */}
         </Stack>
         {/* <Box
           id="image"
