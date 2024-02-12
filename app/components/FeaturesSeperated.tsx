@@ -110,6 +110,7 @@ export default function FeaturesSeperated() {
                 display: "flex",
                 margin: "20px 0px",
                 justifyContent: "space-between",
+                alignItems: "center",
                 flexDirection:
                   windowWidth < 700
                     ? "column"
