@@ -55,7 +55,7 @@ export default function AppAppBar() {
               alignItems: "center",
               justifyContent: "space-between",
               flexShrink: 0,
-              borderRadius: "999px",
+              borderRadius: "10px",
               bgcolor:
                 theme.palette.mode === "light"
                   ? "rgba(255, 255, 255, 0.4)"
@@ -83,8 +83,11 @@ export default function AppAppBar() {
                 width={190}
                 height={50}
                 src={"/logo2.svg"}
-                // style={logoStyle}
                 alt="logo of sitemark"
+                style={{ cursor: "pointer" }}
+                onClick={() =>
+                  window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+                }
               />
               <Box sx={{ display: { xs: "none", md: "flex" } }}>
                 <MenuItem

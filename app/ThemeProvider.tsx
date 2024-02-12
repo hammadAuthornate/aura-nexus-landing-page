@@ -1,10 +1,11 @@
 "use client";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
-import { deepOrange } from "@mui/material/colors";
+import { deepOrange, orange } from "@mui/material/colors";
 
 const theme = createTheme({
   palette: {
     primary: deepOrange,
+    secondary: orange,
   },
 });
 
