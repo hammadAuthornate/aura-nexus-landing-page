@@ -4,6 +4,9 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 const items = [
   {
@@ -62,12 +65,28 @@ const introHeaderVariantsOpposite = {
 };
 
 export default function FeaturesSeperated() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []); // Empty array ensures that effect is only run on mount and unmount
   return (
     <>
       <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
         <Typography
-          fontSize={"50px"}
-          lineHeight={"57px"}
+          fontSize={isSmallScreen ? "24px" : "50px"}
+          lineHeight={isSmallScreen ? "24px" : "57px"}
           fontWeight={700}
           color={"primary"}
           align="center"
@@ -91,7 +110,12 @@ export default function FeaturesSeperated() {
                 display: "flex",
                 margin: "20px 0px",
                 justifyContent: "space-between",
-                flexDirection: index % 2 == 0 ? "row-reverse" : "row",
+                flexDirection:
+                  windowWidth < 700
+                    ? "column"
+                    : index % 2 == 0
+                    ? "row-reverse"
+                    : "row",
               }}
             >
               <Image
@@ -110,7 +134,11 @@ export default function FeaturesSeperated() {
                   textAlign: index % 2 == 0 ? "start" : "end",
                 }}
               >
-                <Typography fontWeight={700} fontSize={"41px"} component="h2">
+                <Typography
+                  fontWeight={700}
+                  fontSize={isSmallScreen ? "21px" : "41px"}
+                  component="h3"
+                >
                   {item.title}
                 </Typography>
                 <Typography fontSize={"23px"}>{item.description}</Typography>

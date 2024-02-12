@@ -54,7 +54,7 @@ export default function Footer() {
                 alt="logo of sitemark"
               />
             </Box>
-            <Typography variant="body2" fontWeight={600} gutterBottom>
+            {/* <Typography variant="body2" fontWeight={600} gutterBottom>
               Newsletter
             </Typography>
             <Typography variant="body2" color="text.secondary" mb={2}>
@@ -81,7 +81,7 @@ export default function Footer() {
               >
                 Subscribe
               </Button>
-            </Stack>
+            </Stack> */}
           </Box>
         </Box>
         <Box

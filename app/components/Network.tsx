@@ -5,6 +5,8 @@ import Typography from "@mui/material/Typography";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 const introHeaderVariants = {
   hide: { opacity: 0, y: 100 },
@@ -16,6 +18,8 @@ const introHeaderVariants = {
 };
 
 export default function NetworkComponent() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <>
       <motion.div
@@ -25,8 +29,8 @@ export default function NetworkComponent() {
         variants={introHeaderVariants}
       >
         <Typography
-          fontSize={"57px"}
-          lineHeight={"57px"}
+          fontSize={isSmallScreen ? "30px" : "57px"}
+          lineHeight={isSmallScreen ? "30px" : "57px"}
           color={"primary"}
           fontWeight={700}
           align="center"
@@ -61,9 +65,9 @@ export default function NetworkComponent() {
         variants={introHeaderVariants}
       >
         <Typography
-          fontSize={"57px"}
-          lineHeight={"57px"}
-          color={"primary"}
+          fontSize={isSmallScreen ? "30px" : "57px"}
+          lineHeight={isSmallScreen ? "30px" : "57px"}
+          //   color={"primary"}
           fontWeight={700}
           align="center"
         >
@@ -78,7 +82,7 @@ export default function NetworkComponent() {
         >
           <Link href={"https://open-book-frontend.vercel.app/Dashboard"}>
             <Button
-              variant="contained"
+              variant="outlined"
               style={{ padding: "20px 80px", marginTop: "50px" }}
             >
               Visit Now

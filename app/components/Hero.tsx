@@ -6,8 +6,12 @@ import Link from "@mui/material/Link";
 import Stack from "@mui/material/Stack";
 import TextField from "@mui/material/TextField";
 import Typography from "@mui/material/Typography";
+import useMediaQuery from "@mui/material/useMediaQuery";
+import { useTheme } from "@mui/material/styles";
 
 export default function Hero() {
+  const theme = useTheme();
+  const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <Box
       id="hero"
@@ -32,8 +36,8 @@ export default function Hero() {
       >
         <Stack spacing={2} useFlexGap sx={{ width: { xs: "100%", sm: "70%" } }}>
           <Typography
-            component="h1"
-            variant="h2"
+            component="h2"
+            variant={isSmallScreen ? "h5" : "h3"}
             sx={{
               display: "inline",
               flexDirection: { xs: "column", md: "row" },
@@ -42,9 +46,10 @@ export default function Hero() {
             }}
           >
             PRODUCTIVITY REDEFINED &nbsp;
+            <br />
             <Typography
               component="span"
-              variant="h3"
+              variant={isSmallScreen ? "h5" : "h3"}
               sx={{
                 display: "inline",
                 color: (theme) =>

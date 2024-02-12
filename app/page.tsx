@@ -10,6 +10,8 @@ import Footer from "./components/Footer";
 import FAQ from "./components/FAQ";
 import FeaturesSeperated from "./components/FeaturesSeperated";
 import NetworkComponent from "./components/Network";
+import Roadmap from "./components/Roadmap";
+import NewsletterForm from "./components/NewsletterForm";
 
 export default function Home() {
   return (
@@ -20,9 +22,11 @@ export default function Home() {
       {/* <Features /> */}
       <FeaturesSeperated />
       <NetworkComponent />
+      <Roadmap />
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
-      <FAQ />
+      {/* <FAQ /> */}
+      <NewsletterForm />
       <Footer />
     </>
   );
