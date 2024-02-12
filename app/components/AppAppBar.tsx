@@ -80,10 +80,10 @@ export default function AppAppBar() {
               }}
             >
               <Image
-                width={190}
-                height={50}
-                src={"/logo2.svg"}
-                alt="logo of sitemark"
+                width={170}
+                height={40}
+                src={"/logo-centered.png"}
+                alt="logo"
                 style={{ cursor: "pointer" }}
                 onClick={() =>
                   window.scrollTo({ top: 0, left: 0, behavior: "smooth" })

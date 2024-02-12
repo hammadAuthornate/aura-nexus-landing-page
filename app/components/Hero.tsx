@@ -33,7 +33,7 @@ export default function Hero() {
         <Stack spacing={2} useFlexGap sx={{ width: { xs: "100%", sm: "70%" } }}>
           <Typography
             component="h1"
-            variant="h1"
+            variant="h2"
             sx={{
               display: "inline",
               flexDirection: { xs: "column", md: "row" },
@@ -41,10 +41,10 @@ export default function Hero() {
               textAlign: "center",
             }}
           >
-            View the World&apos;s &nbsp;
+            PRODUCTIVITY REDEFINED &nbsp;
             <Typography
               component="span"
-              variant="h1"
+              variant="h3"
               sx={{
                 display: "inline",
                 color: (theme) =>
@@ -53,7 +53,7 @@ export default function Hero() {
                     : "primary.light",
               }}
             >
-              Leading News
+              LEARN MORE IN THE VOICES YOU LIKE
             </Typography>
           </Typography>
           <Typography variant="body1" textAlign="center" color="text.secondary">

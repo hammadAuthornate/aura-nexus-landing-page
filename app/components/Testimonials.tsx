@@ -132,6 +132,7 @@ export default function Testimonials() {
                 src={logos[index]}
                 alt={`Logo ${index + 1}`}
                 width={64}
+                height={64}
                 style={{ opacity: 0.3 }}
               />
             </Box>

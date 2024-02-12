@@ -12,32 +12,58 @@ import ChevronRightRoundedIcon from "@mui/icons-material/ChevronRightRounded";
 import DevicesRoundedIcon from "@mui/icons-material/DevicesRounded";
 import EdgesensorHighRoundedIcon from "@mui/icons-material/EdgesensorHighRounded";
 import ViewQuiltRoundedIcon from "@mui/icons-material/ViewQuiltRounded";
+import SourceIcon from "@mui/icons-material/Source";
+import PhotoAlbumIcon from "@mui/icons-material/PhotoAlbum";
+import PublishedWithChangesIcon from "@mui/icons-material/PublishedWithChanges";
 import { useState } from "react";
 
 const items = [
   {
     icon: <ViewQuiltRoundedIcon />,
-    title: "News Dashboard",
+    title: "CELEBRITY VOICED ARTICLE PLAYBACK",
     description:
-      "The News Dashboard allows categorization based on your personal interests and only shows relevant stories.",
-    imageLight: 'url("/dashboard.png")',
-    imageDark: 'url("/dashboard.png")',
+      "Listen to your articles published on 100 of reputable websites & auralnexus narratted by popular celebs of any custom voice",
+    imageLight: 'url("/voiceover.png")',
+    imageDark: 'url("/voiceover.png")',
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
-    title: "AI Summary",
+    title: "AI POWERED ARTICLE SUMMARIES",
     description:
-      "Don't have time to read the entire article? The AI can summerize the articles for your viewing pleasure.",
+      "Enter any article and recieve three types of AI generated summaries.",
     imageLight: 'url("/summary.png")',
     imageDark: 'url("/summary.png")',
   },
   {
     icon: <DevicesRoundedIcon />,
-    title: "Voiceover functionality",
+    title: "PERFECTING THE CONTENTS",
     description:
-      "Too Busy to read? use our voiceover functionality to hear the news stories using celebrity voices.",
+      "Super impose AI generated summaries, with the touch of your own insights.",
     imageLight: 'url("/voiceover.png")',
     imageDark: 'url("/voiceover.png")',
+  },
+  {
+    icon: <PublishedWithChangesIcon />,
+    title: "SHOWCASING PUBLICATIONS",
+    description: "Showcase your content to the entire Auralnexus network",
+    imageLight: 'url("/dashboard.png")',
+    imageDark: 'url("/dashboard.png")',
+  },
+  {
+    icon: <SourceIcon />,
+    title: "EXPLORE ENGAGING CONTENT",
+    description:
+      "Empower your writing with AI generated responses for unique and engaging articles.",
+    imageLight: 'url("/dashboard.png")',
+    imageDark: 'url("/dashboard.png")',
+  },
+  {
+    icon: <PhotoAlbumIcon />,
+    title: "GET UNIQUE GENERATIVE THUMBNALS",
+    description:
+      "Auralnexus creates captivating images for your articles using advanced AI technologes.",
+    imageLight: 'url("/dashboard.png")',
+    imageDark: 'url("/dashboard.png")',
   },
 ];
 
