@@ -9,36 +9,36 @@ import { useTheme } from "@mui/material/styles";
 
 const items = [
   {
-    image: "/solid_music.png",
+    image: "/ai_audio_content.webp",
     title: "CELEBRITY VOICED ARTICLE PLAYBACK",
     description:
       "Listen to your articles published on 100 of reputable websites & auralnexus narratted by popular celebs of any custom voice",
   },
   {
-    image: "/solid_ai.png",
+    image: "/ai_brain.webp",
     title: "AI POWERED ARTICLE SUMMARIES",
     description:
       "Enter any article and recieve three types of AI generated summaries.",
   },
   {
-    image: "/solid_reading.png",
+    image: "/ai_content.webp",
     title: "PERFECTING THE CONTENTS",
     description:
       "Super impose AI generated summaries, with the touch of your own insights.",
   },
   {
-    image: "/solid_publication.png",
+    image: "/ai_publication.webp",
     title: "SHOWCASING PUBLICATIONS",
     description: "Showcase your content to the entire Auralnexus network",
   },
   {
-    image: "/solid_explore.png",
+    image: "/ai_search.webp",
     title: "EXPLORE ENGAGING CONTENT",
     description:
       "Empower your writing with AI generated responses for unique and engaging articles.",
   },
   {
-    image: "/solid_image.png",
+    image: "/ai_thumbnail.webp",
     title: "GET UNIQUE GENERATIVE THUMBNALS",
     description:
       "Auralnexus creates captivating images for your articles using advanced AI technologes.",
