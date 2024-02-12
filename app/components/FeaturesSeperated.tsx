@@ -4,7 +4,6 @@ import Container from "@mui/material/Container";
 import Grid from "@mui/material/Grid";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 
@@ -67,20 +66,6 @@ const introHeaderVariantsOpposite = {
 export default function FeaturesSeperated() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
-
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    // Cleanup the event listener on component unmount
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []); // Empty array ensures that effect is only run on mount and unmount
   return (
     <>
       <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
@@ -111,12 +96,11 @@ export default function FeaturesSeperated() {
                 margin: "20px 0px",
                 justifyContent: "space-between",
                 alignItems: "center",
-                flexDirection:
-                  windowWidth < 700
-                    ? "column"
-                    : index % 2 == 0
-                    ? "row-reverse"
-                    : "row",
+                flexDirection: isSmallScreen
+                  ? "column"
+                  : index % 2 == 0
+                  ? "row-reverse"
+                  : "row",
               }}
             >
               <Image
