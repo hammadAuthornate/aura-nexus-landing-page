@@ -9,6 +9,7 @@ import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
 import FAQ from "./components/FAQ";
 import FeaturesSeperated from "./components/FeaturesSeperated";
+import NetworkComponent from "./components/Network";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <LogoCollection />
       {/* <Features /> */}
       <FeaturesSeperated />
+      <NetworkComponent />
       {/* <Testimonials /> */}
       {/* <Pricing /> */}
       <FAQ />
