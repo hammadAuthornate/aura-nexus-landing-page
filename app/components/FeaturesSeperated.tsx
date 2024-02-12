@@ -93,7 +93,7 @@ export default function FeaturesSeperated() {
               key={index}
               style={{
                 display: "flex",
-                margin: "20px 0px",
+                margin: "10px 0px",
                 justifyContent: "space-between",
                 alignItems: "center",
                 flexDirection: isSmallScreen
@@ -116,7 +116,11 @@ export default function FeaturesSeperated() {
                   display: "flex",
                   flexDirection: "column",
                   justifyContent: "center",
-                  textAlign: index % 2 == 0 ? "start" : "end",
+                  textAlign: isSmallScreen
+                    ? "center"
+                    : index % 2 == 0
+                    ? "start"
+                    : "end",
                 }}
               >
                 <Typography

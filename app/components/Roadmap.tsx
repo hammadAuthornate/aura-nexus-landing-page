@@ -7,7 +7,7 @@ export default function Roadmap() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <div id="roadmap" style={{ marginTop: 80 }}>
+    <div id="roadmap" style={{ marginTop: "80px", paddingTop: "80px" }}>
       <Typography
         fontSize={isSmallScreen ? "30px" : "57px"}
         lineHeight={"57px"}

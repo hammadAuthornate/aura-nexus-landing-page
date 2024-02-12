@@ -15,22 +15,19 @@ export default function Hero() {
   return (
     <Box
       id="hero"
-      sx={(theme) => ({
+      sx={{
         width: "100%",
-        backgroundImage:
-          theme.palette.mode === "light"
-            ? "linear-gradient(180deg, #fbe9e7, #FFF)"
-            : "linear-gradient(#02294F, #090E10)",
-        backgroundSize: "100% 20%",
+        backgroundImage: "linear-gradient(180deg, #fbe9e7, #FFF)",
+        backgroundSize: "100% 80%",
         backgroundRepeat: "no-repeat",
-      })}
+      }}
     >
       <Container
         sx={{
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
-          pt: { xs: 14, sm: 20 },
+          pt: { xs: 20, sm: 30, md: 40 },
           pb: { xs: 8, sm: 12 },
         }}
       >

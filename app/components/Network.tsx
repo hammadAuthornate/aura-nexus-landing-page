@@ -21,7 +21,7 @@ export default function NetworkComponent() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <div id="network">
+    <div id="network" style={{ marginTop: "80px" }}>
       <motion.div
         initial="hide"
         whileInView="show"
@@ -82,7 +82,7 @@ export default function NetworkComponent() {
         >
           <Link href={"https://open-book-frontend.vercel.app/Dashboard"}>
             <Button
-              variant="outlined"
+              variant="contained"
               style={{ padding: "20px 80px", marginTop: "50px" }}
             >
               Visit Now

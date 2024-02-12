@@ -21,6 +21,7 @@ export default function Footer() {
   return (
     <Container
       sx={{
+        marginTop: "80px",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",

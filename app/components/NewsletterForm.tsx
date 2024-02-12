@@ -18,7 +18,8 @@ export default function NewsletterForm() {
         justifyContent: "center",
         alignItems: "center",
         gap: 20,
-        marginTop: 40,
+        marginTop: "80px",
+        paddingTop: "40px",
       }}
     >
       <Typography

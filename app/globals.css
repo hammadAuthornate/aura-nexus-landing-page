@@ -7,14 +7,14 @@
 /* This will hide the image on screens smaller than 600px */
 @media screen and (max-width: 1100px) {
   .img-responsive {
-    width: 50%;
-    height: 50%;
+    width: 70%;
+    height: 70%;
   }
 }
 
 @media screen and (max-width: 799px) {
   .img-responsive {
-    width: 40%;
-    height: 40%;
+    width: 50%;
+    height: 50%;
   }
 }
