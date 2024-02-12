@@ -20,29 +20,24 @@ const items = [
     title: "News Dashboard",
     description:
       "The News Dashboard allows categorization based on your personal interests and only shows relevant stories.",
-    imageLight:
-      'url("/static/images/templates/templates-images/dash-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+    imageLight: 'url("/dashboard.png")',
+    imageDark: 'url("/dashboard.png")',
   },
   {
     icon: <EdgesensorHighRoundedIcon />,
     title: "AI Summary",
     description:
       "Don't have time to read the entire article? The AI can summerize the articles for your viewing pleasure.",
-    imageLight:
-      'url("/static/images/templates/templates-images/mobile-light.png")',
-    imageDark:
-      'url("/static/images/templates/templates-images/mobile-dark.png")',
+    imageLight: 'url("/summary.png")',
+    imageDark: 'url("/summary.png")',
   },
   {
     icon: <DevicesRoundedIcon />,
     title: "Voiceover functionality",
     description:
       "Too Busy to read? use our voiceover functionality to hear the news stories using celebrity voices.",
-    imageLight:
-      'url("/static/images/templates/templates-images/devices-light.png")',
-    imageDark:
-      'url("/static/images/templates/templates-images/devices-dark.png")',
+    imageLight: 'url("/voiceover.png")',
+    imageDark: 'url("/voiceover.png")',
   },
 ];
 
@@ -277,6 +272,7 @@ export default function Features() {
                 width: 420,
                 height: 500,
                 backgroundSize: "contain",
+                backgroundRepeat: "no-repeat",
                 backgroundImage: (theme) =>
                   theme.palette.mode === "light"
                     ? items[selectedItemIndex].imageLight
