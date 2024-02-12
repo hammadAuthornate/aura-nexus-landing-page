@@ -194,7 +194,7 @@ export default function AppAppBar() {
                   <MenuItem onClick={() => scrollToSection("roadmap")}>
                     Roadmap
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("Newsletter")}>
+                  <MenuItem onClick={() => scrollToSection("newsletter")}>
                     Newsletter
                   </MenuItem>
 
