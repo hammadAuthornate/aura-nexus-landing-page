@@ -11,6 +11,7 @@ export default function NewsletterForm() {
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
     <div
+      id="newsletter"
       style={{
         display: "flex",
         flexDirection: "column",

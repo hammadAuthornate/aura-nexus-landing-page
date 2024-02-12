@@ -99,27 +99,27 @@ export default function AppAppBar() {
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => scrollToSection("testimonials")}
+                  onClick={() => scrollToSection("network")}
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Testimonials
+                    Network
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => scrollToSection("pricing")}
+                  onClick={() => scrollToSection("roadmap")}
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Pricing
+                    Roadmap
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => scrollToSection("faq")}
+                  onClick={() => scrollToSection("newsletter")}
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    FAQ
+                    Newsletter
                   </Typography>
                 </MenuItem>
               </Box>
@@ -201,7 +201,7 @@ export default function AppAppBar() {
                     FAQ
                   </MenuItem>
                   <Divider />
-                  <MenuItem>
+                  {/* <MenuItem>
                     <Button
                       color="primary"
                       variant="contained"
@@ -212,9 +212,9 @@ export default function AppAppBar() {
                     >
                       Sign up
                     </Button>
-                  </MenuItem>
+                  </MenuItem> */}
                   <MenuItem>
-                    <Button
+                    {/* <Button
                       color="primary"
                       variant="outlined"
                       component="a"
@@ -223,6 +223,16 @@ export default function AppAppBar() {
                       sx={{ width: "100%" }}
                     >
                       Sign in
+                    </Button> */}
+                    <Button
+                      color="primary"
+                      variant="contained"
+                      size="small"
+                      component="a"
+                      href="https://open-book-frontend.vercel.app/Dashboard"
+                      target="_blank"
+                    >
+                      Visit Site
                     </Button>
                   </MenuItem>
                 </Box>

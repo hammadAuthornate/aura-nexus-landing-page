@@ -21,7 +21,7 @@ export default function NetworkComponent() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <>
+    <div id="network">
       <motion.div
         initial="hide"
         whileInView="show"
@@ -90,6 +90,6 @@ export default function NetworkComponent() {
           </Link>
         </div>
       </motion.div>
-    </>
+    </div>
   );
 }
