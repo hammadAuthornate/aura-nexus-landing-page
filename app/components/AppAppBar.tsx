@@ -80,11 +80,11 @@ export default function AppAppBar() {
               }}
             >
               <Image
-                width={170}
+                width={150}
                 height={40}
                 src={"/logo-centered.png"}
                 alt="logo"
-                style={{ cursor: "pointer" }}
+                style={{ cursor: "pointer", marginBottom: 8 }}
                 onClick={() =>
                   window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
                 }
@@ -132,7 +132,7 @@ export default function AppAppBar() {
               }}
             >
               {/* <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} /> */}
-              <Button
+              {/* <Button
                 color="primary"
                 variant="text"
                 size="small"
@@ -141,16 +141,16 @@ export default function AppAppBar() {
                 target="_blank"
               >
                 Sign in
-              </Button>
+              </Button> */}
               <Button
                 color="primary"
                 variant="contained"
                 size="small"
                 component="a"
-                href="/material-ui/getting-started/templates/sign-up/"
+                href="https://open-book-frontend.vercel.app/Dashboard"
                 target="_blank"
               >
-                Sign up
+                Visit Site
               </Button>
             </Box>
             <Box sx={{ display: { sm: "", md: "none" } }}>

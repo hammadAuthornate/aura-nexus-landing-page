@@ -8,6 +8,7 @@ import Testimonials from "./components/Testimonials";
 import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
 import FAQ from "./components/FAQ";
+import FeaturesSeperated from "./components/FeaturesSeperated";
 
 export default function Home() {
   return (
@@ -15,9 +16,10 @@ export default function Home() {
       <AppAppBar />
       <Hero />
       <LogoCollection />
-      <Features />
-      <Testimonials />
-      <Pricing />
+      {/* <Features /> */}
+      <FeaturesSeperated />
+      {/* <Testimonials /> */}
+      {/* <Pricing /> */}
       <FAQ />
       <Footer />
     </>
