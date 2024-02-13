@@ -14,6 +14,7 @@ import Roadmap from "./components/Roadmap";
 import NewsletterForm from "./components/NewsletterForm";
 // import VerticalTabs from "./components/MuiTabs";
 import TeamsComponent from "./components/Teams";
+import BenefitsSectionComponent from "./components/BenefitsSection";
 
 export default function Home() {
   return (
@@ -24,6 +25,7 @@ export default function Home() {
       {/* <LogoCollection /> */}
       {/* <Features /> */}
       <FeaturesSeperated />
+      <BenefitsSectionComponent />
       <NetworkComponent />
       <Roadmap />
       <TeamsComponent />

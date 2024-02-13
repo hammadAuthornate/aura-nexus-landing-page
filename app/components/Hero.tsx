@@ -24,67 +24,88 @@ export default function Hero() {
       <Box
         id="hero"
         sx={{
+          // maxWidth: "1500px",
           width: "100%",
-          backgroundImage: "linear-gradient(180deg, #fbe9e7, #FFF)",
+          backgroundImage:
+            "linear-gradient(180deg, #fbe9e7, #FFF), url(/e5.svg)",
           backgroundSize: "100% 80%",
+          backgroundPosition: "100% 0%",
           backgroundRepeat: "no-repeat",
         }}
       >
-        <Container
-          disableGutters
-          sx={{
-            display: "flex",
+        <div
+          style={{
             width: "100%",
             backgroundImage: "url(/e5.svg)",
             backgroundPosition: "100% 0%",
             backgroundRepeat: "no-repeat",
-            flexDirection: "column",
-            alignItems: "center",
-            pt: { xs: 20, sm: 30, md: 40 },
-            pb: { xs: 8, sm: 12 },
           }}
         >
-          <Stack
-            spacing={2}
-            useFlexGap
-            sx={{ width: { xs: "100%", sm: "70%" } }}
+          <Container
+            disableGutters
+            sx={{
+              display: "flex",
+              width: "100%",
+              // backgroundImage: "url(/e5.svg)",
+              // backgroundPosition: "100% 0%",
+              // backgroundRepeat: "no-repeat",
+              flexDirection: "column",
+              alignItems: "center",
+              pt: { xs: 20, sm: 30, md: 40 },
+              pb: { xs: 8, sm: 12 },
+            }}
           >
-            <Typography
-              component="h2"
-              variant={isSmallScreen ? "h5" : "h3"}
+            <Stack
+              spacing={2}
+              useFlexGap
               sx={{
-                display: "inline",
-                flexDirection: { xs: "column", md: "row" },
-                alignSelf: "center",
-                textAlign: "center",
+                width: {
+                  xs: "100%",
+                  sm: "70%",
+                  backgroundImage: "url(/lines_white.png)",
+                  backgroundSize: "auto 300px",
+                  // backgroundRepeat: "repeat-x",
+                  backgroundBlendMode: "darken",
+                  backgroundPosition: "50% 50%",
+                },
               }}
             >
-              PRODUCTIVITY REDEFINED &nbsp;
-              <br />
               <Typography
-                component="span"
+                component="h2"
                 variant={isSmallScreen ? "h5" : "h3"}
                 sx={{
                   display: "inline",
-                  color: (theme) =>
-                    theme.palette.mode === "light"
-                      ? "primary.main"
-                      : "primary.light",
+                  flexDirection: { xs: "column", md: "row" },
+                  alignSelf: "center",
+                  textAlign: "center",
                 }}
               >
-                LEARN MORE IN THE VOICES YOU LIKE
+                PRODUCTIVITY REDEFINED &nbsp;
+                <br />
+                <Typography
+                  component="span"
+                  variant={isSmallScreen ? "h5" : "h3"}
+                  sx={{
+                    display: "inline",
+                    color: (theme) =>
+                      theme.palette.mode === "light"
+                        ? "primary.main"
+                        : "primary.light",
+                  }}
+                >
+                  LEARN MORE IN THE VOICES YOU LIKE
+                </Typography>
               </Typography>
-            </Typography>
-            <Typography
-              variant="body1"
-              textAlign="center"
-              color="text.secondary"
-            >
-              Explore our cutting-edge News dashboard, delivering high-quality
-              articles with voiceover from popular celebrities. <br />
-              Elevate your news viewing experience with top-tier features.
-            </Typography>
-            {/* <Stack
+              <Typography
+                variant="body1"
+                textAlign="center"
+                color="text.secondary"
+              >
+                Explore our cutting-edge News dashboard, delivering high-quality
+                articles with voiceover from popular celebrities. <br />
+                Elevate your news viewing experience with top-tier features.
+              </Typography>
+              {/* <Stack
             direction={{ xs: "column", sm: "row" }}
             alignSelf="center"
             spacing={1}
@@ -118,8 +139,8 @@ export default function Hero() {
             </Link>
             .
           </Typography> */}
-          </Stack>
-          {/* <Box
+            </Stack>
+            {/* <Box
           id="image"
           sx={(theme) => ({
             mt: { xs: 8, sm: 10 },
@@ -143,7 +164,8 @@ export default function Hero() {
                 : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
           })}
         /> */}
-        </Container>
+          </Container>
+        </div>
       </Box>
     </div>
   );
