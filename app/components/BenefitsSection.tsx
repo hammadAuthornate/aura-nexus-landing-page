@@ -4,6 +4,7 @@ import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import { useState } from "react";
 
 const benefits = [
   {
@@ -151,6 +152,8 @@ const benefits = [
 export default function BenefitsSectionComponent() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
+
+  const [currentDescription, setCurrentDescription] = useState("");
   return (
     <Container>
       {benefits.map((benefit, index) => (
@@ -165,6 +168,11 @@ export default function BenefitsSectionComponent() {
           >
             <div>{benefit.header}</div>
           </Typography>
+          <div>
+            {currentDescription && (
+              <Typography variant="body2">{currentDescription}</Typography>
+            )}
+          </div>
           <div
             style={{
               display: "flex",
@@ -182,11 +190,17 @@ export default function BenefitsSectionComponent() {
                 key={index2}
                 style={{ height: 200, width: 200 }}
               >
-                <Container>
-                  <Typography align="center" variant="h6">
-                    {section.title}
-                  </Typography>
-                </Container>
+                <div
+                  onMouseEnter={() =>
+                    setCurrentDescription(section.description)
+                  }
+                >
+                  <Container>
+                    <Typography align="center" variant="h6">
+                      {section.title}
+                    </Typography>
+                  </Container>
+                </div>
                 {/* <Typography variant="body1">{section.description}</Typography> */}
               </Paper>
             ))}
