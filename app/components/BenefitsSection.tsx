@@ -5,6 +5,20 @@ import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import { benefits } from "./BenefitsList";
+import Card from "@mui/material/Card";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Image from "next/image";
+import { motion } from "framer-motion";
+
+const introHeaderVariants = {
+  hide: { opacity: 0, y: 200 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.2 },
+  },
+};
 
 export default function BenefitsSectionComponent() {
   const theme = useTheme();
@@ -12,6 +26,7 @@ export default function BenefitsSectionComponent() {
 
   return (
     <div
+      id="features"
       style={{
         maxWidth: "2500px",
         width: "100%",
@@ -22,6 +37,9 @@ export default function BenefitsSectionComponent() {
         {benefits.map((benefit, index) => (
           <div key={index}>
             <Typography
+              fontSize={isSmallScreen ? "24px" : "50px"}
+              lineHeight={isSmallScreen ? "24px" : "57px"}
+              fontWeight={700}
               align="center"
               mb={10}
               mt={10}
@@ -30,12 +48,11 @@ export default function BenefitsSectionComponent() {
             >
               <div>{benefit.header}</div>
             </Typography>
-            {/* <div>
-            {currentDescription && (
-              <Typography variant="body2">{currentDescription}</Typography>
-            )}
-          </div> */}
-            <div
+            <motion.div
+              initial="hide"
+              whileInView="show"
+              exit="hide"
+              variants={introHeaderVariants}
               style={{
                 display: "flex",
                 flexDirection: "row",
@@ -47,23 +64,28 @@ export default function BenefitsSectionComponent() {
               }}
             >
               {benefit.children.map((section, index2) => (
-                <Paper
+                <Card
                   elevation={3}
                   key={index2}
-                  style={{ maxHeight: 250, width: 300, padding: "20px 0px" }}
+                  style={{
+                    maxHeight: 350,
+                    width: 300,
+                    padding: "20px 0px",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                  }}
                 >
-                  <div
-                  //   onMouseEnter={() =>
-                  //     setCurrentDescription(section.description)
-                  //   }
-                  >
-                    <Container>
-                      <Typography
-                        noWrap
-                        color="secondary"
-                        align="center"
-                        variant="h6"
-                      >
+                  <Image
+                    src={section.icon || "/OIG4.jpeg"}
+                    alt="card image"
+                    width={250}
+                    height={100}
+                    style={{ width: "40%", height: "auto" }}
+                  />
+                  <CardContent>
+                    <Container disableGutters>
+                      <Typography color="secondary" align="center" variant="h6">
                         {section.title}
                       </Typography>
                       <Typography
@@ -74,11 +96,10 @@ export default function BenefitsSectionComponent() {
                         {section.description}
                       </Typography>
                     </Container>
-                  </div>
-                  {/* <Typography variant="body1">{section.description}</Typography> */}
-                </Paper>
+                  </CardContent>
+                </Card>
               ))}
-            </div>
+            </motion.div>
           </div>
         ))}
       </Container>

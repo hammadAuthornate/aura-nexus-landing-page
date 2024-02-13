@@ -19,7 +19,7 @@ export default function TeamsComponent() {
   return (
     <div
       style={{
-        backgroundImage: "url(/shade.png)",
+        backgroundImage: "url(/WaveLineDense.svg)",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "50% 0%",
       }}

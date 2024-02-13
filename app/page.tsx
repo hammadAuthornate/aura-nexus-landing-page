@@ -24,7 +24,7 @@ export default function Home() {
       {/* <VerticalTabs /> */}
       {/* <LogoCollection /> */}
       {/* <Features /> */}
-      <FeaturesSeperated />
+      {/* <FeaturesSeperated /> */}
       <BenefitsSectionComponent />
       <NetworkComponent />
       <Roadmap />

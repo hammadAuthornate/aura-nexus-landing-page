@@ -36,9 +36,9 @@ export default function Hero() {
         <div
           style={{
             width: "100%",
-            backgroundImage: "url(/e5.svg)",
-            backgroundPosition: "100% 0%",
-            backgroundRepeat: "no-repeat",
+            // backgroundImage: "url(/e5.svg)",
+            // backgroundPosition: "100% 0%",
+            // backgroundRepeat: "no-repeat",
           }}
         >
           <Container
