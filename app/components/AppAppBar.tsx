@@ -163,7 +163,7 @@ export default function AppAppBar() {
               >
                 <MenuIcon />
               </Button>
-              <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
+              <Drawer anchor="top" open={open} onClose={toggleDrawer(false)}>
                 <Box
                   sx={{
                     minWidth: "60dvw",
