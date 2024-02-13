@@ -13,57 +13,78 @@ export default function Hero() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <Box
-      id="hero"
-      sx={{
-        width: "100%",
-        backgroundImage: "linear-gradient(180deg, #fbe9e7, #FFF)",
-        backgroundSize: "100% 80%",
-        backgroundRepeat: "no-repeat",
-      }}
+    <div
+    // style={{
+    //   width: "100%",
+    //   backgroundImage: "url(/e5.svg)",
+    //   backgroundPosition: "100% 0%",
+    //   backgroundRepeat: "no-repeat",
+    // }}
     >
-      <Container
+      <Box
+        id="hero"
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          pt: { xs: 20, sm: 30, md: 40 },
-          pb: { xs: 8, sm: 12 },
+          width: "100%",
+          backgroundImage: "linear-gradient(180deg, #fbe9e7, #FFF)",
+          backgroundSize: "100% 80%",
+          backgroundRepeat: "no-repeat",
         }}
       >
-        <Stack spacing={2} useFlexGap sx={{ width: { xs: "100%", sm: "70%" } }}>
-          <Typography
-            component="h2"
-            variant={isSmallScreen ? "h5" : "h3"}
-            sx={{
-              display: "inline",
-              flexDirection: { xs: "column", md: "row" },
-              alignSelf: "center",
-              textAlign: "center",
-            }}
+        <Container
+          disableGutters
+          sx={{
+            display: "flex",
+            width: "100%",
+            backgroundImage: "url(/e5.svg)",
+            backgroundPosition: "100% 0%",
+            backgroundRepeat: "no-repeat",
+            flexDirection: "column",
+            alignItems: "center",
+            pt: { xs: 20, sm: 30, md: 40 },
+            pb: { xs: 8, sm: 12 },
+          }}
+        >
+          <Stack
+            spacing={2}
+            useFlexGap
+            sx={{ width: { xs: "100%", sm: "70%" } }}
           >
-            PRODUCTIVITY REDEFINED &nbsp;
-            <br />
             <Typography
-              component="span"
+              component="h2"
               variant={isSmallScreen ? "h5" : "h3"}
               sx={{
                 display: "inline",
-                color: (theme) =>
-                  theme.palette.mode === "light"
-                    ? "primary.main"
-                    : "primary.light",
+                flexDirection: { xs: "column", md: "row" },
+                alignSelf: "center",
+                textAlign: "center",
               }}
             >
-              LEARN MORE IN THE VOICES YOU LIKE
+              PRODUCTIVITY REDEFINED &nbsp;
+              <br />
+              <Typography
+                component="span"
+                variant={isSmallScreen ? "h5" : "h3"}
+                sx={{
+                  display: "inline",
+                  color: (theme) =>
+                    theme.palette.mode === "light"
+                      ? "primary.main"
+                      : "primary.light",
+                }}
+              >
+                LEARN MORE IN THE VOICES YOU LIKE
+              </Typography>
             </Typography>
-          </Typography>
-          <Typography variant="body1" textAlign="center" color="text.secondary">
-            Explore our cutting-edge News dashboard, delivering high-quality
-            articles with voiceover from popular celebrities. <br />
-            Elevate your news viewing experience with top-tier features.
-          </Typography>
-          {/* <Stack
+            <Typography
+              variant="body1"
+              textAlign="center"
+              color="text.secondary"
+            >
+              Explore our cutting-edge News dashboard, delivering high-quality
+              articles with voiceover from popular celebrities. <br />
+              Elevate your news viewing experience with top-tier features.
+            </Typography>
+            {/* <Stack
             direction={{ xs: "column", sm: "row" }}
             alignSelf="center"
             spacing={1}
@@ -97,8 +118,8 @@ export default function Hero() {
             </Link>
             .
           </Typography> */}
-        </Stack>
-        {/* <Box
+          </Stack>
+          {/* <Box
           id="image"
           sx={(theme) => ({
             mt: { xs: 8, sm: 10 },
@@ -122,7 +143,8 @@ export default function Hero() {
                 : `0 0 24px 12px ${alpha("#033363", 0.2)}`,
           })}
         /> */}
-      </Container>
-    </Box>
+        </Container>
+      </Box>
+    </div>
   );
 }

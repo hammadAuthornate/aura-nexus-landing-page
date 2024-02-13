@@ -20,6 +20,10 @@ export default function NewsletterForm() {
         gap: 20,
         marginTop: "80px",
         paddingTop: "40px",
+        backgroundImage: "url(/snake.png)",
+        backgroundRepeat: "no-repeat",
+        backgroundPosition: "0% 100%",
+        width: "100%",
       }}
     >
       <Typography

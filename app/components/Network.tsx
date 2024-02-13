@@ -21,7 +21,16 @@ export default function NetworkComponent() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
   return (
-    <div id="network" style={{ marginTop: "80px" }}>
+    <div
+      id="network"
+      style={{
+        marginTop: "80px",
+        backgroundImage:
+          "linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url('/lines.png')",
+        backgroundBlendMode: "lighten",
+        backgroundPosition: "center",
+      }}
+    >
       <motion.div
         initial="hide"
         whileInView="show"
@@ -74,7 +83,9 @@ export default function NetworkComponent() {
           EXPERIENCE THE MAGIC <br />
           OF AURALNEXUS
         </Typography>
-        <div
+        <motion.div
+          animate={{ y: ["0%", "10%", "0%"] }}
+          transition={{ duration: 1, repeat: Infinity }}
           style={{
             display: "flex",
             justifyContent: "center",
@@ -92,7 +103,7 @@ export default function NetworkComponent() {
               Visit Now
             </Button>
           </Link>
-        </div>
+        </motion.div>
       </motion.div>
     </div>
   );
