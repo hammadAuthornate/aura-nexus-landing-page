@@ -46,19 +46,19 @@ const items = [
 ];
 
 const introHeaderVariants = {
-  hide: { opacity: 0, y: -200 },
+  hide: { opacity: 0, x: -200 },
   show: {
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: { duration: 1 },
   },
 };
 
 const introHeaderVariantsOpposite = {
-  hide: { opacity: 0, y: 200 },
+  hide: { opacity: 0, x: 200 },
   show: {
     opacity: 1,
-    y: 0,
+    x: 0,
     transition: { duration: 1 },
   },
 };
@@ -92,6 +92,7 @@ export default function FeaturesSeperated() {
               }
               key={index}
               style={{
+                overflow: "hidden",
                 display: "flex",
                 margin: "80px 0px",
                 justifyContent: "space-between",

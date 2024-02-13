@@ -46,9 +46,12 @@ export default function Hero() {
             sx={{
               display: "flex",
               width: "100%",
+              backgroundImage: "url(/SoundWave.svg)",
+              backgroundSize: "auto 400px",
+              backgroundPosition: "50% 50%",
               // backgroundImage: "url(/e5.svg)",
               // backgroundPosition: "100% 0%",
-              // backgroundRepeat: "no-repeat",
+              backgroundRepeat: "no-repeat",
               flexDirection: "column",
               alignItems: "center",
               pt: { xs: 20, sm: 30, md: 40 },
@@ -62,11 +65,11 @@ export default function Hero() {
                 width: {
                   xs: "100%",
                   sm: "70%",
-                  backgroundImage: "url(/lines_white.png)",
-                  backgroundSize: "auto 300px",
-                  // backgroundRepeat: "repeat-x",
-                  backgroundBlendMode: "darken",
-                  backgroundPosition: "50% 50%",
+                  // backgroundImage: "url(/SoundWave.svg)",
+                  // backgroundSize: "auto 400px",
+                  // // backgroundRepeat: "repeat-x",
+                  // backgroundBlendMode: "lighten",
+                  // backgroundPosition: "50% 50%",
                 },
               }}
             >
