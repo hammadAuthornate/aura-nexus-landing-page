@@ -1,6 +1,6 @@
 export const benefits = [
   {
-    header: "Celebrity voiced article",
+    header: "Celebrity Voiced Articles",
     children: [
       {
         icon: "/icons/EnhancedEngagement.jpeg",
@@ -79,7 +79,7 @@ export const benefits = [
     ],
   },
   {
-    header: "Perfecting the contents",
+    header: "Perfecting the Contents",
     children: [
       //   {
       //     title: "Enhanced Understanding",
