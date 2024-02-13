@@ -106,12 +106,20 @@ export default function AppAppBar() {
                     Network
                   </Typography>
                 </MenuItem>
-                <MenuItem
+                {/* <MenuItem
                   onClick={() => scrollToSection("roadmap")}
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography variant="body2" color="text.primary">
                     Roadmap
+                  </Typography>
+                </MenuItem> */}
+                <MenuItem
+                  onClick={() => scrollToSection("team")}
+                  sx={{ py: "6px", px: "12px" }}
+                >
+                  <Typography variant="body2" color="text.primary">
+                    Team
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -191,8 +199,11 @@ export default function AppAppBar() {
                   <MenuItem onClick={() => scrollToSection("network")}>
                     Network
                   </MenuItem>
-                  <MenuItem onClick={() => scrollToSection("roadmap")}>
+                  {/* <MenuItem onClick={() => scrollToSection("roadmap")}>
                     Roadmap
+                  </MenuItem> */}
+                  <MenuItem onClick={() => scrollToSection("team")}>
+                    Team
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection("newsletter")}>
                     Newsletter

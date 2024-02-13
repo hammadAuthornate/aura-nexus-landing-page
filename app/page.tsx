@@ -27,7 +27,7 @@ export default function Home() {
       {/* <FeaturesSeperated /> */}
       <BenefitsSectionComponent />
       <NetworkComponent />
-      <Roadmap />
+      {/* <Roadmap /> */}
       <TeamsComponent />
       {/* <Testimonials /> */}
       {/* <Pricing /> */}

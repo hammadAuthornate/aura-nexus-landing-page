@@ -64,40 +64,52 @@ export default function BenefitsSectionComponent() {
               }}
             >
               {benefit.children.map((section, index2) => (
-                <Card
-                  elevation={3}
+                <motion.div
                   key={index2}
-                  style={{
-                    maxHeight: 350,
-                    width: 300,
-                    padding: "20px 0px",
-                    display: "flex",
-                    flexDirection: "column",
-                    alignItems: "center",
+                  whileHover={{
+                    scale: 1.2,
                   }}
+                  transition={{ duration: 0.5 }}
                 >
-                  <Image
-                    src={section.icon || "/OIG4.jpeg"}
-                    alt="card image"
-                    width={250}
-                    height={100}
-                    style={{ width: "40%", height: "auto" }}
-                  />
-                  <CardContent>
-                    <Container disableGutters>
-                      <Typography color="secondary" align="center" variant="h6">
-                        {section.title}
-                      </Typography>
-                      <Typography
-                        fontSize={"14px"}
-                        align="center"
-                        variant="body1"
-                      >
-                        {section.description}
-                      </Typography>
-                    </Container>
-                  </CardContent>
-                </Card>
+                  <Card
+                    //   className="scale-on-hover"
+                    elevation={3}
+                    style={{
+                      maxHeight: 350,
+                      width: 300,
+                      padding: "20px 0px",
+                      display: "flex",
+                      flexDirection: "column",
+                      alignItems: "center",
+                    }}
+                  >
+                    <Image
+                      src={section.icon || "/OIG4.jpeg"}
+                      alt="card image"
+                      width={250}
+                      height={100}
+                      style={{ width: "40%", height: "auto" }}
+                    />
+                    <CardContent>
+                      <Container disableGutters>
+                        <Typography
+                          color="secondary"
+                          align="center"
+                          variant="h6"
+                        >
+                          {section.title}
+                        </Typography>
+                        <Typography
+                          fontSize={"14px"}
+                          align="center"
+                          variant="body1"
+                        >
+                          {section.description}
+                        </Typography>
+                      </Container>
+                    </CardContent>
+                  </Card>
+                </motion.div>
               ))}
             </motion.div>
           </div>

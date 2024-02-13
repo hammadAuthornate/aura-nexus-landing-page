@@ -38,7 +38,7 @@ export default function NetworkComponent() {
         variants={introHeaderVariants}
       >
         <Typography
-          fontSize={isSmallScreen ? "30px" : "57px"}
+          fontSize={isSmallScreen ? "30px" : "37px"}
           lineHeight={isSmallScreen ? "30px" : "57px"}
           color={"primary"}
           fontWeight={700}
@@ -64,7 +64,7 @@ export default function NetworkComponent() {
           width={600}
           height={600}
           className="img-responsive"
-          style={{ width: "100%" }}
+          style={{ width: "100%", maxWidth: "800px" }}
         />
       </motion.div>
       <motion.div
@@ -74,14 +74,13 @@ export default function NetworkComponent() {
         variants={introHeaderVariants}
       >
         <Typography
-          fontSize={isSmallScreen ? "30px" : "57px"}
+          fontSize={isSmallScreen ? "18px" : "30px"}
           lineHeight={isSmallScreen ? "30px" : "57px"}
           //   color={"primary"}
           fontWeight={700}
           align="center"
         >
-          EXPERIENCE THE MAGIC <br />
-          OF AURALNEXUS
+          EXPERIENCE THE MAGIC OF AURALNEXUS
         </Typography>
         <motion.div
           animate={{ y: ["0%", "10%", "0%"] }}
