@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
+import Container from "@mui/material/Container";
 
 const introHeaderVariants = {
   hide: { opacity: 0, y: 100 },
@@ -24,7 +25,8 @@ export default function NetworkComponent() {
     <div
       id="network"
       style={{
-        marginTop: "80px",
+        marginTop: "250px",
+        padding: "40px 0px",
         backgroundImage:
           "linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.8)), url('/lines.png')",
         backgroundBlendMode: "lighten",
@@ -67,7 +69,7 @@ export default function NetworkComponent() {
           style={{ width: "100%", maxWidth: "800px" }}
         />
       </motion.div>
-      <motion.div
+      {/* <motion.div
         initial="hide"
         whileInView="show"
         exit="hide"
@@ -76,7 +78,7 @@ export default function NetworkComponent() {
         <Typography
           fontSize={isSmallScreen ? "18px" : "30px"}
           lineHeight={isSmallScreen ? "30px" : "57px"}
-          //   color={"primary"}
+          color={"secondary"}
           fontWeight={700}
           align="center"
         >
@@ -103,6 +105,29 @@ export default function NetworkComponent() {
             </Button>
           </Link>
         </motion.div>
+      </motion.div> */}
+      <motion.div
+        initial="hide"
+        whileInView="show"
+        exit="hide"
+        variants={introHeaderVariants}
+      >
+        <Container
+          style={{ display: "flex", gap: "20px", justifyContent: "center" }}
+        >
+          <Image
+            src={"/solid_play.png"}
+            alt="play store"
+            width={50}
+            height={50}
+          />
+          <Image
+            src={"/solid_app.png"}
+            alt="play store"
+            width={50}
+            height={50}
+          />
+        </Container>
       </motion.div>
     </div>
   );

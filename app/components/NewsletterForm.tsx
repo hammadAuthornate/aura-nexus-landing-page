@@ -18,7 +18,7 @@ export default function NewsletterForm() {
         justifyContent: "center",
         alignItems: "center",
         gap: 20,
-        marginTop: "80px",
+        marginTop: "250px",
         paddingTop: "40px",
         backgroundImage: "url(/snake.png)",
         backgroundRepeat: "no-repeat",

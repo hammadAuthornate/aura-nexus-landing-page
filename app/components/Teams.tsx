@@ -14,6 +14,19 @@ const introHeaderVariants = {
   },
 };
 
+const teams = [
+  {
+    name: "GHULAM HAIDER",
+    description: "Founder and CEO",
+    image: "/teams_1.jpg",
+  },
+  {
+    name: "AUTHORNATE",
+    description: "Technical Team",
+    image: "/teams_2.jpg",
+  },
+];
+
 export default function TeamsComponent() {
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
@@ -24,6 +37,7 @@ export default function TeamsComponent() {
         backgroundImage: "url(/WaveLineDense.svg)",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "50% 0%",
+        marginTop: "250px",
       }}
     >
       <motion.div
@@ -38,7 +52,6 @@ export default function TeamsComponent() {
           color={"primary"}
           fontWeight={700}
           align="center"
-          mt={20}
         >
           MEET THE VISIONARIES <br />
           BEHIND AURALNEXUS
@@ -69,72 +82,42 @@ export default function TeamsComponent() {
           marginTop: "20px",
         }}
       >
-        <motion.div
-          whileHover={{
-            scale: 1.2,
-          }}
-        >
-          <Paper
-            elevation={3}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              padding: "20px 20px",
-              width: "250px",
-              height: "300px",
-              backgroundColor: "rgba(255,255,255,0.5)",
-              justifyContent: "space-between",
+        {teams.map((team, index) => (
+          <motion.div
+            key={index}
+            whileHover={{
+              scale: 1.2,
             }}
           >
-            <Image
-              src={"/teams_1.jpg"}
-              alt="team"
-              width={200}
-              height={200}
-              style={{ borderRadius: "30px" }}
-            />
-            <Typography align="center" fontSize={"30px"}>
-              GHULAM HAIDER
-            </Typography>
-            <Typography align="center" fontSize={"20px"}>
-              Founder and CEO
-            </Typography>
-          </Paper>
-        </motion.div>
-        <motion.div
-          whileHover={{
-            scale: 1.2,
-          }}
-        >
-          <Paper
-            elevation={3}
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-              padding: "20px 20px",
-              width: "250px",
-              height: "300px",
-              backgroundColor: "rgba(255,255,255,0.5)",
-              justifyContent: "space-between",
-            }}
-          >
-            <Image
-              src={"/teams_2.jpg"}
-              alt="team"
-              width={200}
-              height={200}
-              style={{ borderRadius: "30px" }}
-            />
-            <Typography align="center" fontSize={"30px"}>
-              AUTHORNATE
-            </Typography>
-            <Typography align="center" fontSize={"20px"}>
-              Technical Team
-            </Typography>
-          </Paper>
-        </motion.div>
+            <Paper
+              elevation={3}
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                padding: "20px 0px",
+                width: "250px",
+                height: "300px",
+                backgroundColor: "rgba(255,255,255,0.5)",
+                justifyContent: "space-between",
+              }}
+            >
+              <Image
+                src={team.image}
+                alt="team"
+                width={200}
+                height={200}
+                style={{ borderRadius: "10px" }}
+              />
+              <Typography align="center" fontSize={"30px"}>
+                {team.name}
+              </Typography>
+              <Typography align="center" fontSize={"20px"}>
+                {team.description}
+              </Typography>
+            </Paper>
+          </motion.div>
+        ))}
       </motion.div>
     </div>
   );
