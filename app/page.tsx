@@ -26,7 +26,7 @@ export default function Home() {
       {/* <Features /> */}
       {/* <FeaturesSeperated /> */}
       <BenefitsSectionComponent />
-      <NetworkComponent />
+      {/* <NetworkComponent /> */}
       {/* <Roadmap /> */}
       <TeamsComponent />
       {/* <Testimonials /> */}

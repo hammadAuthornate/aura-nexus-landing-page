@@ -5,38 +5,44 @@ export const benefits = [
       {
         icon: "/icons/EnhancedEngagement.jpeg",
         title: "Enhanced Engagement",
+        // description:
+        //   "Hearing articles narrated by popular celebrities adds an element of excitement and novelty, increasing user engagement and time spent on the website.",
         description:
-          "Hearing articles narrated by popular celebrities adds an element of excitement and novelty, increasing user engagement and time spent on the website.",
+          "Celebrity-narrated articles enhance user engagement and website visit duration.",
       },
       {
         icon: "/icons/Accessibility.jpeg",
         title: "Accessibility",
+        // description:
+        //   "For users with visual impairments or those who prefer consuming content audibly, this feature provides an accessible way to access website content.",
         description:
-          "For users with visual impairments or those who prefer consuming content audibly, this feature provides an accessible way to access website content.",
+          "Offers an audible and accessible method for visually impaired users or those who prefer audio content.",
       },
-      {
-        icon: "/icons/Personalization.jpeg",
-        title: "Personalization",
-        description:
-          "Allowing users to choose from a variety of celebrity voices adds a personalized touch to the user experience, catering to different preferences and tastes.",
-      },
-      {
-        icon: "/icons/BrandAssociation.jpeg",
-        title: "Brand Association",
-        description:
-          "Associating a website with popular celebrities can enhance its brand image and credibility, attracting more visitors and potential customers.",
-      },
-      {
-        icon: "/icons/IncreasedTraffic.jpeg",
-        title: "Increased Traffic",
-        description:
-          "The allure of hearing articles narrated by celebrities can drive more traffic to the website, especially if users are encouraged to share their favorite narrations on social media platforms.",
-      },
+      // {
+      //   icon: "/icons/Personalization.jpeg",
+      //   title: "Personalization",
+      //   description:
+      //     "Allowing users to choose from a variety of celebrity voices adds a personalized touch to the user experience, catering to different preferences and tastes.",
+      // },
+      // {
+      //   icon: "/icons/BrandAssociation.jpeg",
+      //   title: "Brand Association",
+      //   description:
+      //     "Associating a website with popular celebrities can enhance its brand image and credibility, attracting more visitors and potential customers.",
+      // },
+      // {
+      //   icon: "/icons/IncreasedTraffic.jpeg",
+      //   title: "Increased Traffic",
+      //   description:
+      //     "The allure of hearing articles narrated by celebrities can drive more traffic to the website, especially if users are encouraged to share their favorite narrations on social media platforms.",
+      // },
       {
         icon: "/icons/MonetizationOpportunities.jpeg",
         title: "Monetization Opportunities",
+        // description:
+        //   "The allure of hearing articles narrated by celebrities can drive more traffic to the website, especially if users are encouraged to share their favorite narrations on social media platforms.",
         description:
-          "The allure of hearing articles narrated by celebrities can drive more traffic to the website, especially if users are encouraged to share their favorite narrations on social media platforms.",
+          "Celebrity-narrated articles can boost website traffic and allow users to share their favorite narrations on social media.",
       },
     ],
   },
@@ -46,20 +52,24 @@ export const benefits = [
       {
         icon: "/icons/TimeSaving.jpeg",
         title: "Time-Saving",
+        // description:
+        //   "Users can quickly grasp the key points of an article without having to read the entire piece, saving them time and effort.",
         description:
-          "Users can quickly grasp the key points of an article without having to read the entire piece, saving them time and effort.",
+          "Users can save time and effort by quickly understanding an article key points without reading the whole piece.",
       },
-      {
-        icon: "/icons/ImprovedAccessibility.jpeg",
-        title: "Improved Accessibility",
-        description:
-          "For users with limited time or those who prefer concise information, AI-generated summaries provide an accessible way to digest content.",
-      },
+      // {
+      //   icon: "/icons/ImprovedAccessibility.jpeg",
+      //   title: "Improved Accessibility",
+      //   description:
+      //     "For users with limited time or those who prefer concise information, AI-generated summaries provide an accessible way to digest content.",
+      // },
       {
         icon: "/icons/EnhancedUserExperience.jpeg",
         title: "Enhanced User Experience",
+        // description:
+        //   "Providing multiple types of summaries tailored to different preferences (e.g., bullet points, keyword highlights, abstracts) caters to a diverse audience, improving overall user satisfaction.",
         description:
-          "Providing multiple types of summaries tailored to different preferences (e.g., bullet points, keyword highlights, abstracts) caters to a diverse audience, improving overall user satisfaction.",
+          "Offering various summary styles tailored to user preferences enhances user satisfaction by catering to a diverse audience.",
       },
       //   {
       //     title: "Increased Engagement",
@@ -78,44 +88,44 @@ export const benefits = [
       //   },
     ],
   },
-  {
-    header: "Perfecting the Contents",
-    children: [
-      //   {
-      //     title: "Enhanced Understanding",
-      //     description:
-      //       "By combining AI-generated summaries with human insights, users gain a deeper understanding of the content. AI can provide a quick overview of the key points, while human insights offer context, analysis, and additional perspectives, enriching the user experience.",
-      //   },
-      {
-        icon: "/icons/IncreasedCredibility.jpeg",
-        title: "Increased Credibility",
-        description:
-          "Human insights add credibility and authenticity to the summaries. Users are more likely to trust information supplemented with expert opinions or personalized commentary, leading to a stronger connection with the content and the website as a whole.",
-      },
-      //   {
-      //     title: "Customization",
-      //     description:
-      //       "The fusion of AI-generated summaries and human insights allows for customization based on user preferences and interests. Users can choose the level of detail they want, ranging from concise summaries to more in-depth analyses, tailoring their experience to suit their needs.",
-      //   },
-      {
-        icon: "/icons/Differentiation.jpeg",
-        title: "Differentiation",
-        description:
-          "Websites that offer AI-generated summaries enhanced with personalized insights stand out from competitors by providing a unique and value-added service. This differentiation can attract and retain users who appreciate the blend of automated efficiency and human expertise.",
-      },
-      //   {
-      //     title: "Improved Engagement",
-      //     description:
-      //       "Combining AI-generated summaries with human insights creates a more engaging experience for users. The interplay between automated summarization and human commentary stimulates curiosity, encourages exploration, and fosters deeper engagement with the content.",
-      //   },
-      {
-        icon: "/icons/CommunityBuilding.jpeg",
-        title: "Community Building",
-        description:
-          "Incorporating human insights into AI-generated summaries can foster a sense of community among users. Encouraging discussions, comments, or contributions from experts and other users further enriches the content and creates opportunities for interaction and knowledge sharing.",
-      },
-    ],
-  },
+  // {
+  //   header: "Perfecting the Contents",
+  //   children: [
+  //     //   {
+  //     //     title: "Enhanced Understanding",
+  //     //     description:
+  //     //       "By combining AI-generated summaries with human insights, users gain a deeper understanding of the content. AI can provide a quick overview of the key points, while human insights offer context, analysis, and additional perspectives, enriching the user experience.",
+  //     //   },
+  //     {
+  //       icon: "/icons/IncreasedCredibility.jpeg",
+  //       title: "Increased Credibility",
+  //       description:
+  //         "Human insights add credibility and authenticity to the summaries. Users are more likely to trust information supplemented with expert opinions or personalized commentary, leading to a stronger connection with the content and the website as a whole.",
+  //     },
+  //     //   {
+  //     //     title: "Customization",
+  //     //     description:
+  //     //       "The fusion of AI-generated summaries and human insights allows for customization based on user preferences and interests. Users can choose the level of detail they want, ranging from concise summaries to more in-depth analyses, tailoring their experience to suit their needs.",
+  //     //   },
+  //     {
+  //       icon: "/icons/Differentiation.jpeg",
+  //       title: "Differentiation",
+  //       description:
+  //         "Websites that offer AI-generated summaries enhanced with personalized insights stand out from competitors by providing a unique and value-added service. This differentiation can attract and retain users who appreciate the blend of automated efficiency and human expertise.",
+  //     },
+  //     //   {
+  //     //     title: "Improved Engagement",
+  //     //     description:
+  //     //       "Combining AI-generated summaries with human insights creates a more engaging experience for users. The interplay between automated summarization and human commentary stimulates curiosity, encourages exploration, and fosters deeper engagement with the content.",
+  //     //   },
+  //     // {
+  //     //   icon: "/icons/CommunityBuilding.jpeg",
+  //     //   title: "Community Building",
+  //     //   description:
+  //     //     "Incorporating human insights into AI-generated summaries can foster a sense of community among users. Encouraging discussions, comments, or contributions from experts and other users further enriches the content and creates opportunities for interaction and knowledge sharing.",
+  //     // },
+  //   ],
+  // },
   //   {
   //     header: "Showcasing Publications",
   //     children: [
@@ -152,26 +162,28 @@ export const benefits = [
   //     ],
   //   },
   {
-    header: "Get Unique Generative Thumbnail",
+    header: "Get Unique Generative Thumbnails",
     children: [
       {
         icon: "/icons/IncreasedVisualAppeal.jpeg",
         title: "Increased Visual Appeal",
         description:
-          "Unique generative thumbnails created by AI technology can grab users' attention and entice them to click on articles. Eye-catching visuals enhance the overall appeal of your website and contribute to a positive user experience.",
+          // "Unique generative thumbnails created by AI technology can grab users' attention and entice them to click on articles. Eye-catching visuals enhance the overall appeal of your website and contribute to a positive user experience.",
+          "AI-generated thumbnails attract users, encourage clicks on articles, and enhance website appeal and user experience.",
       },
       {
         icon: "/icons/TimeAndResourceEfficiency.jpeg",
-        title: "Time and Resource Efficiency",
+        title: "Time & Resource Efficiency",
         description:
-          "Generating thumbnails with AI technology eliminates the need for manual image creation or sourcing, saving time and resources for your team. This efficiency allows you to focus on other aspects of content creation and website management.",
+          // "Generating thumbnails with AI technology eliminates the need for manual image creation or sourcing, saving time and resources for your team. This efficiency allows you to focus on other aspects of content creation and website management.",
+          "AI technology for generating thumbnails saves time and resources, allowing focus on other aspects of content creation and website management.",
       },
-      {
-        icon: "/icons/ImprovedSEO.jpeg",
-        title: "Improved SEO",
-        description:
-          "High-quality, visually appealing thumbnails can increase click-through rates and engagement metrics, which are factors that search engines consider when ranking web pages. By improving user interaction with your content, generative thumbnails can indirectly contribute to improved search engine optimization (SEO) for your website.",
-      },
+      // {
+      //   icon: "/icons/ImprovedSEO.jpeg",
+      //   title: "Improved SEO",
+      //   description:
+      //     "High-quality, visually appealing thumbnails can increase click-through rates and engagement metrics, which are factors that search engines consider when ranking web pages. By improving user interaction with your content, generative thumbnails can indirectly contribute to improved search engine optimization (SEO) for your website.",
+      // },
     ],
   },
 ];
