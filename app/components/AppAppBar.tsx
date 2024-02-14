@@ -127,7 +127,7 @@ export default function AppAppBar() {
                   sx={{ py: "6px", px: "12px" }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Newsletter
+                    Contact
                   </Typography>
                 </MenuItem>
               </Box>
@@ -206,7 +206,7 @@ export default function AppAppBar() {
                     Team
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection("newsletter")}>
-                    Newsletter
+                    Contact
                   </MenuItem>
 
                   <Divider />
@@ -234,6 +234,7 @@ export default function AppAppBar() {
                       Sign in
                     </Button> */}
                     <Button
+                      fullWidth
                       color="primary"
                       variant="contained"
                       size="small"

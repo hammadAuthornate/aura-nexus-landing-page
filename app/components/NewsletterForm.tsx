@@ -112,8 +112,8 @@ export default function NewsletterForm() {
       </motion.div>
       <Box
         sx={{
-          width: 700,
-          maxWidth: "100%",
+          width: "100%",
+          maxWidth: 700,
           display: "flex",
           flexDirection: isSmallScreen ? "column" : "row",
           justifyContent: "space-between",
@@ -142,7 +142,7 @@ export default function NewsletterForm() {
             }}
             fullWidth
             focused
-            sx={{ borderRadius: "25px" }}
+            sx={{ backgroundColor: "white" }}
             variant="outlined"
             // label="Name"
             placeholder="Your Name"
@@ -173,6 +173,7 @@ export default function NewsletterForm() {
             fullWidth
             focused
             variant="outlined"
+            sx={{ backgroundColor: "white" }}
             // label="Linkedin"
             placeholder="Your Linkedin Profile"
             value={userData?.linkedIn || ""}
@@ -194,11 +195,12 @@ export default function NewsletterForm() {
             transition: { duration: 1.2 },
           },
         }}
+        style={{ width: "100%", display: "flex", justifyContent: "center" }}
       >
         <Box
           sx={{
-            width: 700,
-            maxWidth: "100%",
+            width: "100%",
+            maxWidth: 700,
           }}
         >
           <TextField

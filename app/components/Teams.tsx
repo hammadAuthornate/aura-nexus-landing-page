@@ -55,7 +55,6 @@ export default function TeamsComponent() {
           color={"primary"}
           fontWeight={700}
           align="center"
-          mb={10}
         >
           MEET THE VISIONARIES <br />
           BEHIND AURALNEXUS
@@ -80,10 +79,11 @@ export default function TeamsComponent() {
         style={{
           display: "flex",
           flexDirection: isSmallScreen ? "column" : "row",
-          gap: isSmallScreen ? "40px" : "100px",
+          gap: isSmallScreen ? "50px" : "100px",
           alignItems: "center",
           justifyContent: "center",
           marginTop: "20px",
+          paddingTop: 10,
         }}
       >
         {teams.map((team, index) => (
@@ -109,7 +109,7 @@ export default function TeamsComponent() {
               <Image
                 src={team.image}
                 alt="team"
-                width={300}
+                width={isSmallScreen ? 200 : 300}
                 height={250}
                 style={{
                   borderRadius: "30px",
