@@ -55,6 +55,7 @@ export default function TeamsComponent() {
           color={"primary"}
           fontWeight={700}
           align="center"
+          mb={10}
         >
           MEET THE VISIONARIES <br />
           BEHIND AURALNEXUS
@@ -79,7 +80,7 @@ export default function TeamsComponent() {
         style={{
           display: "flex",
           flexDirection: isSmallScreen ? "column" : "row",
-          gap: isSmallScreen ? "40px" : "80px",
+          gap: isSmallScreen ? "40px" : "100px",
           alignItems: "center",
           justifyContent: "center",
           marginTop: "20px",
@@ -108,11 +109,20 @@ export default function TeamsComponent() {
               <Image
                 src={team.image}
                 alt="team"
-                width={250}
+                width={300}
                 height={250}
-                style={{ borderRadius: "30px" }}
+                style={{
+                  borderRadius: "30px",
+                  height: "auto",
+                  marginBottom: 25,
+                }}
               />
-              <Typography fontWeight={600} align="center" fontSize={"26px"}>
+              <Typography
+                mb={2}
+                fontWeight={600}
+                align="center"
+                fontSize={"26px"}
+              >
                 {team.name}
               </Typography>
               <Typography align="center" fontSize={"16px"}>

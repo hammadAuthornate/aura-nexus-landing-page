@@ -75,7 +75,7 @@ export default function BenefitsSectionComponent() {
                     //   className="scale-on-hover"
                     elevation={3}
                     style={{
-                      maxHeight: 350,
+                      height: 260,
                       width: 300,
                       padding: "20px 0px",
                       display: "flex",

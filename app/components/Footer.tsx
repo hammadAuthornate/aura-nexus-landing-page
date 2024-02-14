@@ -176,12 +176,12 @@ export default function Footer() {
             <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
               &nbsp;•&nbsp;
             </Typography>
-            <Link color="text.secondary" href="#">
+            {/* <Link color="text.secondary" href="#">
               Terms of Service
             </Link>{" "}
             <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
               &nbsp;•&nbsp;
-            </Typography>
+            </Typography> */}
             <Link color="text.secondary" href="#">
               Security
             </Link>
@@ -250,8 +250,9 @@ export default function Footer() {
             </IconButton>
             <IconButton
               color="inherit"
-              // href=""
               sx={{ alignSelf: "center" }}
+              href="https://open-book-frontend.vercel.app/Dashboard"
+              target="_blank"
             >
               <Image
                 src="/solid_logo.png"

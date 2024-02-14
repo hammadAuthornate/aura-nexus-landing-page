@@ -7,6 +7,16 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
+import { motion } from "framer-motion";
+
+const introHeaderVariants = {
+  hide: { opacity: 0, y: 200 },
+  show: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.2 },
+  },
+};
 
 export default function NewsletterForm() {
   const [open, setOpen] = useState(false);
@@ -73,68 +83,132 @@ export default function NewsletterForm() {
         message={snackbarMessage}
         // action={action}
       />
-      <Typography
-        fontSize={isSmallScreen ? "30px" : "57px"}
-        lineHeight={isSmallScreen ? "30px" : "57px"}
-        color={"primary"}
-        fontWeight={700}
-        align="center"
-        style={{ padding: "20px 0px" }}
+      <motion.div
+        initial="hide"
+        whileInView="show"
+        exit="hide"
+        variants={introHeaderVariants}
       >
-        INTERESTED IN OUR PROJECT? <br /> REQUEST A PITCH TODAY
-      </Typography>
+        <Typography
+          fontSize={isSmallScreen ? "30px" : "57px"}
+          lineHeight={isSmallScreen ? "30px" : "57px"}
+          color={"primary"}
+          fontWeight={400}
+          align="center"
+          style={{ padding: "60px 0px" }}
+        >
+          INTERESTED IN OUR PROJECT? <br /> REQUEST A PITCH TODAY
+        </Typography>
+      </motion.div>
       <Box
         sx={{
-          width: 500,
+          width: 700,
           maxWidth: "100%",
           display: "flex",
+          flexDirection: isSmallScreen ? "column" : "row",
           justifyContent: "space-between",
+          gap: "20px",
         }}
       >
-        <TextField
-          focused
-          // sx={{ border: "-1px solid #ff5722", borderRadius: "5px" }}
-          variant="outlined"
-          // label="Name"
-          placeholder="Your Name"
-          value={userData?.name || ""}
-          onChange={(v) => setUserData({ ...userData, name: v.target.value })}
-        />
-        <TextField
-          focused
-          variant="outlined"
-          // label="Linkedin"
-          placeholder="Your Linkedin Profile"
-          value={userData?.linkedIn || ""}
-          onChange={(v) =>
-            setUserData({ ...userData, linkedIn: v.target.value })
-          }
-        />
+        <motion.div
+          initial="hide"
+          whileInView="show"
+          exit="hide"
+          variants={{
+            hide: { opacity: 0, rotateY: 90 },
+            show: {
+              opacity: 1,
+              rotateY: 0,
+              transition: { duration: 1.2 },
+            },
+          }}
+          style={{ width: "100%" }}
+        >
+          <TextField
+            fullWidth
+            focused
+            sx={{ borderRadius: "25px" }}
+            variant="outlined"
+            // label="Name"
+            placeholder="Your Name"
+            value={userData?.name || ""}
+            onChange={(v) => setUserData({ ...userData, name: v.target.value })}
+          />
+        </motion.div>
+        <motion.div
+          initial="hide"
+          whileInView="show"
+          exit="hide"
+          variants={{
+            hide: { opacity: 0, rotateY: 90 },
+            show: {
+              opacity: 1,
+              rotateY: 0,
+              transition: { duration: 1.2 },
+            },
+          }}
+          style={{ width: "100%" }}
+        >
+          <TextField
+            fullWidth
+            focused
+            variant="outlined"
+            // label="Linkedin"
+            placeholder="Your Linkedin Profile"
+            value={userData?.linkedIn || ""}
+            onChange={(v) =>
+              setUserData({ ...userData, linkedIn: v.target.value })
+            }
+          />
+        </motion.div>
       </Box>
-      <Box
-        sx={{
-          width: 500,
-          maxWidth: "100%",
+      <motion.div
+        initial="hide"
+        whileInView="show"
+        exit="hide"
+        variants={{
+          hide: { opacity: 0, rotateY: 90 },
+          show: {
+            opacity: 1,
+            rotateY: 0,
+            transition: { duration: 1.2 },
+          },
         }}
       >
-        <TextField
-          focused
-          fullWidth
-          variant="outlined"
-          // label="Email"
-          placeholder="Your Email"
-          value={userData?.email || ""}
-          onChange={(v) => setUserData({ ...userData, email: v.target.value })}
-        />
-      </Box>
-      <Button
-        variant="contained"
-        size="large"
-        style={{ padding: "10px 50px", transform: "skewX(-20deg)" }}
-        onClick={submitForm}
+        <Box
+          sx={{
+            width: 700,
+            maxWidth: "100%",
+          }}
+        >
+          <TextField
+            focused
+            fullWidth
+            variant="outlined"
+            sx={{ backgroundColor: "white" }}
+            // label="Email"
+            placeholder="Your Email"
+            value={userData?.email || ""}
+            onChange={(v) =>
+              setUserData({ ...userData, email: v.target.value })
+            }
+          />
+        </Box>
+      </motion.div>
+      <motion.div
+        whileHover={{
+          scale: 1.1,
+        }}
       >
-        Subscribe
-      </Button>
+        <Button
+          variant="contained"
+          size="large"
+          style={{ padding: "10px 50px", transform: "skewX(-20deg)" }}
+          onClick={submitForm}
+        >
+          Subscribe
+        </Button>
+      </motion.div>
     </div>
   );
 }
