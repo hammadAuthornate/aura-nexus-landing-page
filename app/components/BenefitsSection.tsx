@@ -36,18 +36,32 @@ export default function BenefitsSectionComponent() {
       <Container style={{ maxWidth: "1200px" }}>
         {benefits.map((benefit, index) => (
           <div key={index}>
-            <Typography
-              fontSize={isSmallScreen ? "24px" : "50px"}
-              lineHeight={isSmallScreen ? "24px" : "57px"}
-              fontWeight={700}
-              align="center"
-              mb={10}
-              mt={10}
-              variant={isSmallScreen ? "h5" : "h3"}
-              color="primary"
+            <motion.div
+              initial="hide"
+              whileInView="show"
+              exit="hide"
+              variants={{
+                hide: { opacity: 0, rotateX: 90 },
+                show: {
+                  opacity: 1,
+                  rotateX: 0,
+                  transition: { duration: 0.8 },
+                },
+              }}
             >
-              <div>{benefit.header}</div>
-            </Typography>
+              <Typography
+                fontSize={isSmallScreen ? "24px" : "50px"}
+                lineHeight={isSmallScreen ? "24px" : "57px"}
+                fontWeight={700}
+                align="center"
+                mb={10}
+                mt={10}
+                variant={isSmallScreen ? "h5" : "h3"}
+                color="primary"
+              >
+                {benefit.header}
+              </Typography>
+            </motion.div>
             <motion.div
               initial="hide"
               whileInView="show"

@@ -8,6 +8,7 @@ import { useTheme } from "@mui/material/styles";
 import { useState } from "react";
 import Snackbar from "@mui/material/Snackbar";
 import { motion } from "framer-motion";
+// import { makeStyles } from "@mui/material/mal";
 
 const introHeaderVariants = {
   hide: { opacity: 0, y: 200 },
@@ -19,6 +20,15 @@ const introHeaderVariants = {
 };
 
 export default function NewsletterForm() {
+  // const useStyles = makeStyles(() => ({
+  //   customTextField: {
+  //     "& .MuiOutlinedInput-root": {
+  //       "& fieldset": {
+  //         borderRadius: "15px", // Change this to your desired border radius
+  //       },
+  //     },
+  //   },
+  // }));
   const [open, setOpen] = useState(false);
   const [snackbarMessage, setSnackbarMessage] = useState("");
   const handleClick = (message: string) => {
@@ -125,6 +135,11 @@ export default function NewsletterForm() {
           style={{ width: "100%" }}
         >
           <TextField
+            InputProps={{
+              style: {
+                borderRadius: 15,
+              },
+            }}
             fullWidth
             focused
             sx={{ borderRadius: "25px" }}
@@ -150,6 +165,11 @@ export default function NewsletterForm() {
           style={{ width: "100%" }}
         >
           <TextField
+            InputProps={{
+              style: {
+                borderRadius: 15,
+              },
+            }}
             fullWidth
             focused
             variant="outlined"
@@ -182,6 +202,11 @@ export default function NewsletterForm() {
           }}
         >
           <TextField
+            InputProps={{
+              style: {
+                borderRadius: 15,
+              },
+            }}
             focused
             fullWidth
             variant="outlined"

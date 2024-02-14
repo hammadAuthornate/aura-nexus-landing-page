@@ -39,7 +39,7 @@ export default function TeamsComponent() {
       style={{
         backgroundImage: "url(/WaveLineDense.svg)",
         backgroundRepeat: "no-repeat",
-        backgroundPosition: "50% 0%",
+        backgroundPosition: "0% 0%",
         marginTop: "250px",
       }}
     >
