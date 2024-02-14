@@ -79,7 +79,7 @@ export default function TeamsComponent() {
         style={{
           display: "flex",
           flexDirection: isSmallScreen ? "column" : "row",
-          gap: isSmallScreen ? "40px" : "180px",
+          gap: isSmallScreen ? "40px" : "80px",
           alignItems: "center",
           justifyContent: "center",
           marginTop: "20px",
@@ -89,7 +89,7 @@ export default function TeamsComponent() {
           <motion.div
             key={index}
             whileHover={{
-              scale: 1.2,
+              scale: 1.1,
             }}
           >
             <Paper

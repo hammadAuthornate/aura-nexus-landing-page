@@ -6,8 +6,25 @@ import Typography from "@mui/material/Typography";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import { useState } from "react";
+import Snackbar from "@mui/material/Snackbar";
 
 export default function NewsletterForm() {
+  const [open, setOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+  const handleClick = (message: string) => {
+    setSnackbarMessage(message);
+    setOpen(true);
+  };
+  const handleClose = (
+    event: React.SyntheticEvent | Event,
+    reason?: string
+  ) => {
+    if (reason === "clickaway") {
+      return;
+    }
+    setOpen(false);
+  };
+
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("md"));
 
@@ -18,20 +35,18 @@ export default function NewsletterForm() {
   } | null>(null);
 
   const submitForm = async () => {
-    console.log(userData);
-    const response = await fetch("/api/newsletter", {
-      method: "POST",
-      // body: {
-      //   name: userData?.name || "",
-      //   email: userData?.email,
-      //   linkedIn: userData?.linkedIn,
-      // },
-      body: JSON.stringify(userData),
-    });
-    if (response.ok) {
-      console.log("Email sent successfully");
+    if (!userData?.email || !userData?.name || !userData?.linkedIn) {
+      handleClick("Please add missing fields.");
     } else {
-      console.error("Error sending email");
+      const response = await fetch("/api", {
+        method: "POST",
+        body: JSON.stringify(userData),
+      });
+      if (response.ok) {
+        handleClick("Email sent successfully");
+      } else {
+        handleClick("Error sending email");
+      }
     }
   };
   return (
@@ -51,6 +66,13 @@ export default function NewsletterForm() {
         width: "100%",
       }}
     >
+      <Snackbar
+        open={open}
+        autoHideDuration={6000}
+        onClose={handleClose}
+        message={snackbarMessage}
+        // action={action}
+      />
       <Typography
         fontSize={isSmallScreen ? "30px" : "57px"}
         lineHeight={isSmallScreen ? "30px" : "57px"}
@@ -59,7 +81,7 @@ export default function NewsletterForm() {
         align="center"
         style={{ padding: "20px 0px" }}
       >
-        SUBSCRIBE TO OUR NEWSLETTER
+        INTERESTED IN OUR PROJECT? <br /> REQUEST A PITCH TODAY
       </Typography>
       <Box
         sx={{
@@ -70,15 +92,18 @@ export default function NewsletterForm() {
         }}
       >
         <TextField
+          focused
+          // sx={{ border: "-1px solid #ff5722", borderRadius: "5px" }}
           variant="outlined"
-          label="Name"
+          // label="Name"
           placeholder="Your Name"
           value={userData?.name || ""}
           onChange={(v) => setUserData({ ...userData, name: v.target.value })}
         />
         <TextField
+          focused
           variant="outlined"
-          label="Linkedin"
+          // label="Linkedin"
           placeholder="Your Linkedin Profile"
           value={userData?.linkedIn || ""}
           onChange={(v) =>
@@ -93,9 +118,10 @@ export default function NewsletterForm() {
         }}
       >
         <TextField
+          focused
           fullWidth
           variant="outlined"
-          label="Email"
+          // label="Email"
           placeholder="Your Email"
           value={userData?.email || ""}
           onChange={(v) => setUserData({ ...userData, email: v.target.value })}
