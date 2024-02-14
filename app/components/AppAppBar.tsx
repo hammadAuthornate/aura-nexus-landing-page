@@ -84,7 +84,7 @@ export default function AppAppBar() {
                 height={40}
                 src={"/logo-centered.png"}
                 alt="logo"
-                style={{ cursor: "pointer", marginBottom: 8 }}
+                style={{ cursor: "pointer", marginBottom: 7 }}
                 onClick={() =>
                   window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
                 }

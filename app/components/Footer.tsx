@@ -56,6 +56,9 @@ export default function Footer() {
             <Box sx={{ width: { xs: "100%", sm: "60%" } }}>
               <Box sx={{ ml: "-15px" }}>
                 <Image
+                  onClick={() =>
+                    window.scrollTo({ top: 0, left: 0, behavior: "smooth" })
+                  }
                   src={"/logo.svg"}
                   width={180}
                   height={80}
@@ -63,36 +66,36 @@ export default function Footer() {
                 />
               </Box>
               {/* <Typography variant="body2" fontWeight={600} gutterBottom>
-              Newsletter
-            </Typography>
-            <Typography variant="body2" color="text.secondary" mb={2}>
-              Subscribe to our newsletter for weekly updates and promotions.
-            </Typography>
-            <Stack direction="row" spacing={1} useFlexGap>
-              <TextField
-                id="outlined-basic"
-                hiddenLabel
-                size="small"
-                variant="outlined"
-                fullWidth
-                aria-label="Enter your email address"
-                placeholder="Your email address"
-                inputProps={{
-                  autocomplete: "off",
-                  ariaLabel: "Enter your email address",
-                }}
-              />
-              <Button
-                variant="contained"
-                color="primary"
-                sx={{ flexShrink: 0 }}
-              >
-                Subscribe
-              </Button>
-            </Stack> */}
+                Newsletter
+              </Typography>
+              <Typography variant="body2" color="text.secondary" mb={2}>
+                Subscribe to our newsletter for weekly updates and promotions.
+              </Typography>
+              <Stack direction="row" spacing={1} useFlexGap>
+                <TextField
+                  id="outlined-basic"
+                  hiddenLabel
+                  size="small"
+                  variant="outlined"
+                  fullWidth
+                  aria-label="Enter your email address"
+                  placeholder="Your email address"
+                  inputProps={{
+                    autocomplete: "off",
+                    ariaLabel: "Enter your email address",
+                  }}
+                />
+                <Button
+                  variant="contained"
+                  color="primary"
+                  sx={{ flexShrink: 0 }}
+                >
+                  Subscribe
+                </Button>
+              </Stack>*/}
             </Box>
           </Box>
-          <Box
+          {/* <Box
             sx={{
               display: { xs: "none", sm: "flex" },
               flexDirection: "column",
@@ -154,7 +157,7 @@ export default function Footer() {
             <Link color="text.secondary" href="#">
               Contact
             </Link>
-          </Box>
+          </Box> */}
         </Box>
         <Box
           sx={{
@@ -175,6 +178,12 @@ export default function Footer() {
             </Typography>
             <Link color="text.secondary" href="#">
               Terms of Service
+            </Link>{" "}
+            <Typography display="inline" sx={{ mx: 0.5, opacity: 0.5 }}>
+              &nbsp;•&nbsp;
+            </Typography>
+            <Link color="text.secondary" href="#">
+              Security
             </Link>
             <Typography variant="body2" color="text.secondary" mt={1}>
               {"Copyright © "}
@@ -191,7 +200,7 @@ export default function Footer() {
               color: "text.secondary",
             }}
           >
-            <IconButton
+            {/* <IconButton
               color="inherit"
               // href=""
               aria-label="GitHub"
@@ -214,6 +223,45 @@ export default function Footer() {
               sx={{ alignSelf: "center" }}
             >
               <LinkedInIcon />
+            </IconButton> */}
+            <IconButton
+              color="inherit"
+              // href=""
+              aria-label="LinkedIn"
+              sx={{ alignSelf: "center" }}
+            >
+              <Image
+                src="/google-play.svg"
+                alt="google play"
+                width={24}
+                height={24}
+              />
+            </IconButton>
+            <IconButton
+              color="inherit"
+              // href=""
+              aria-label="LinkedIn"
+              sx={{ alignSelf: "center" }}
+            >
+              <Image
+                src="/app-store.svg"
+                alt="app store"
+                width={24}
+                height={24}
+              />
+            </IconButton>
+            <IconButton
+              color="inherit"
+              // href=""
+              aria-label="LinkedIn"
+              sx={{ alignSelf: "center" }}
+            >
+              <Image
+                src="/solid_logo.png"
+                alt="aural nexus"
+                width={24}
+                height={20}
+              />
             </IconButton>
           </Stack>
         </Box>

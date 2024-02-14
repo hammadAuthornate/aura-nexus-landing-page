@@ -30,7 +30,7 @@ export default function BenefitsSectionComponent() {
       style={{
         maxWidth: "2500px",
         width: "100%",
-        backgroundImage: "url('/WaveLine.svg')",
+        backgroundImage: "url('/WaveLineLong.svg')",
       }}
     >
       <Container style={{ maxWidth: "1200px" }}>

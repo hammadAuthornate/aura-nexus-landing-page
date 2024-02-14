@@ -17,12 +17,12 @@ const introHeaderVariants = {
 const teams = [
   {
     name: "GHULAM HAIDER",
-    description: "Founder and CEO",
+    description: "Founder & CEO",
     image: "/teams_1.jpg",
   },
   {
     name: "AUTHORNATE",
-    description: "Technical Team",
+    description: "Development Partners",
     image: "/teams_2.jpg",
   },
 ];
@@ -76,7 +76,7 @@ export default function TeamsComponent() {
         style={{
           display: "flex",
           flexDirection: isSmallScreen ? "column" : "row",
-          gap: "60px",
+          gap: "20px",
           alignItems: "center",
           justifyContent: "center",
           marginTop: "20px",
@@ -95,21 +95,21 @@ export default function TeamsComponent() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                padding: "20px 0px",
+                padding: "0px 0px",
                 width: "250px",
-                height: "300px",
-                backgroundColor: "rgba(255,255,255,0.5)",
+                height: "350px",
+                backgroundColor: "rgba(255,255,255,0.9)",
                 justifyContent: "space-between",
               }}
             >
               <Image
                 src={team.image}
                 alt="team"
-                width={200}
-                height={200}
-                style={{ borderRadius: "10px" }}
+                width={250}
+                height={250}
+                style={{ borderRadius: "5px" }}
               />
-              <Typography align="center" fontSize={"30px"}>
+              <Typography align="center" fontSize={"26px"}>
                 {team.name}
               </Typography>
               <Typography align="center" fontSize={"20px"}>
