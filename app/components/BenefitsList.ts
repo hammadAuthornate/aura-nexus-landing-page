@@ -18,31 +18,33 @@ export const benefits = [
         description:
           "Offers an audible and accessible method for visually impaired users or those who prefer audio content.",
       },
-      // {
-      //   icon: "/icons/Personalization.jpeg",
-      //   title: "Personalization",
-      //   description:
-      //     "Allowing users to choose from a variety of celebrity voices adds a personalized touch to the user experience, catering to different preferences and tastes.",
-      // },
-      // {
-      //   icon: "/icons/BrandAssociation.jpeg",
-      //   title: "Brand Association",
-      //   description:
-      //     "Associating a website with popular celebrities can enhance its brand image and credibility, attracting more visitors and potential customers.",
-      // },
-      // {
-      //   icon: "/icons/IncreasedTraffic.jpeg",
-      //   title: "Increased Traffic",
-      //   description:
-      //     "The allure of hearing articles narrated by celebrities can drive more traffic to the website, especially if users are encouraged to share their favorite narrations on social media platforms.",
-      // },
+      {
+        icon: "/icons/Personalization.jpeg",
+        title: "Personalization",
+        description:
+          // "Allowing users to choose from a variety of celebrity voices adds a personalized touch to the user experience, catering to different preferences and tastes.",
+          "Offering a variety of celebrity voices personalizes the user experience, catering to diverse preferences and tastes.",
+      },
+      {
+        icon: "/icons/BrandAssociation.jpeg",
+        title: "Brand Association",
+        description:
+          "Associating a website with popular celebrities can enhance its brand image and credibility, attracting more visitors and potential customers.",
+      },
+      {
+        icon: "/icons/IncreasedTraffic.jpeg",
+        title: "Increased Traffic",
+        description:
+          // "The allure of hearing articles narrated by celebrities can drive more traffic to the website, especially if users are encouraged to share their favorite narrations on social media platforms.",
+          "Celebrity-narrated articles can boost website traffic, particularly when users share these narrations on social media.",
+      },
       {
         icon: "/icons/MonetizationOpportunities.jpeg",
         title: "Monetization Opportunities",
         // description:
-        //   "The allure of hearing articles narrated by celebrities can drive more traffic to the website, especially if users are encouraged to share their favorite narrations on social media platforms.",
+        //   "This feature opens up opportunities for monetization through partnerships with celebrities or sponsored content, generating revenue for the website owner.",
         description:
-          "Celebrity-narrated articles can boost website traffic and allow users to share their favorite narrations on social media.",
+          "Enables monetization via celebrity partnerships or sponsored content, thereby generating website revenue.",
       },
     ],
   },
@@ -57,12 +59,12 @@ export const benefits = [
         description:
           "Users can save time and effort by quickly understanding an article key points without reading the whole piece.",
       },
-      // {
-      //   icon: "/icons/ImprovedAccessibility.jpeg",
-      //   title: "Improved Accessibility",
-      //   description:
-      //     "For users with limited time or those who prefer concise information, AI-generated summaries provide an accessible way to digest content.",
-      // },
+      {
+        icon: "/icons/ImprovedAccessibility.jpeg",
+        title: "Improved Accessibility",
+        description:
+          "For users with limited time or those who prefer concise information, AI-generated summaries provide an accessible way to digest content.",
+      },
       {
         icon: "/icons/EnhancedUserExperience.jpeg",
         title: "Enhanced User Experience",

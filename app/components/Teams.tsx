@@ -3,7 +3,8 @@ import useMediaQuery from "@mui/material/useMediaQuery";
 import { useTheme } from "@mui/material/styles";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Paper } from "@mui/material";
+import { IconButton, Paper } from "@mui/material";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const introHeaderVariants = {
   hide: { opacity: 0, y: 100 },
@@ -19,11 +20,13 @@ const teams = [
     name: "GHULAM HAIDER",
     description: "Founder & CEO",
     image: "/teams_1.jpg",
+    linkedin: "https://ca.linkedin.com/in/haidersattar",
   },
   {
     name: "AUTHORNATE",
     description: "Development Partners",
     image: "/teams_2.jpg",
+    linkedin: "https://www.linkedin.com/company/authornate",
   },
 ];
 
@@ -76,7 +79,7 @@ export default function TeamsComponent() {
         style={{
           display: "flex",
           flexDirection: isSmallScreen ? "column" : "row",
-          gap: "20px",
+          gap: isSmallScreen ? "40px" : "180px",
           alignItems: "center",
           justifyContent: "center",
           marginTop: "20px",
@@ -90,7 +93,7 @@ export default function TeamsComponent() {
             }}
           >
             <Paper
-              elevation={3}
+              elevation={0}
               style={{
                 display: "flex",
                 flexDirection: "column",
@@ -98,7 +101,7 @@ export default function TeamsComponent() {
                 padding: "0px 0px",
                 width: "250px",
                 height: "350px",
-                backgroundColor: "rgba(255,255,255,0.9)",
+                backgroundColor: "rgba(255,255,255,0)",
                 justifyContent: "space-between",
               }}
             >
@@ -107,14 +110,23 @@ export default function TeamsComponent() {
                 alt="team"
                 width={250}
                 height={250}
-                style={{ borderRadius: "5px" }}
+                style={{ borderRadius: "30px" }}
               />
-              <Typography align="center" fontSize={"26px"}>
+              <Typography fontWeight={600} align="center" fontSize={"26px"}>
                 {team.name}
               </Typography>
-              <Typography align="center" fontSize={"20px"}>
+              <Typography align="center" fontSize={"16px"}>
                 {team.description}
               </Typography>
+              <a href={team.linkedin} target="_blank">
+                <IconButton
+                  // color="inherit"
+                  // href=""
+                  sx={{ alignSelf: "center" }}
+                >
+                  <LinkedInIcon />
+                </IconButton>
+              </a>
             </Paper>
           </motion.div>
         ))}

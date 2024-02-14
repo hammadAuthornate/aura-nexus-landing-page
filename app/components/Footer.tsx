@@ -227,7 +227,6 @@ export default function Footer() {
             <IconButton
               color="inherit"
               // href=""
-              aria-label="LinkedIn"
               sx={{ alignSelf: "center" }}
             >
               <Image
@@ -240,7 +239,6 @@ export default function Footer() {
             <IconButton
               color="inherit"
               // href=""
-              aria-label="LinkedIn"
               sx={{ alignSelf: "center" }}
             >
               <Image
@@ -253,7 +251,6 @@ export default function Footer() {
             <IconButton
               color="inherit"
               // href=""
-              aria-label="LinkedIn"
               sx={{ alignSelf: "center" }}
             >
               <Image
